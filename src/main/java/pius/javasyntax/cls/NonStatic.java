@@ -10,7 +10,17 @@ public class NonStatic {
 
     class Foo {
 
+        private String greet = "innerHello";
         public String hello()  {
+
+            return NonStatic.this.greet;
+        }
+
+        public String thisHello() {
+            return this.greet;
+        }
+
+        public String justHello() {
             return greet;
         }
     }

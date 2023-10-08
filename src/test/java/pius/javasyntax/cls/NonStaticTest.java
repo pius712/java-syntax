@@ -16,4 +16,18 @@ class NonStaticTest {
 
         Assertions.assertThat(hello).isEqualTo("hello");
     }
+
+    @Test
+    public void thisHello() {
+        NonStatic.Foo foo = new NonStatic("hello").new Foo();
+        String hello = foo.thisHello();
+        Assertions.assertThat(hello).isEqualTo("innerHello");
+    }
+
+    @Test
+    public void justHello() {
+        NonStatic.Foo foo = new NonStatic("hello").new Foo();
+        String hello = foo.justHello();
+        Assertions.assertThat(hello).isEqualTo("innerHello");
+    }
 }
