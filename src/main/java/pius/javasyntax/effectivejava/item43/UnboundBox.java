@@ -13,10 +13,10 @@ public class UnboundBox {
     }
 
     public void change(UnboundOperand operand) {
-        operand.apply(bound);
+        operand.apply(bound, 1);
     }
 }
 
 interface UnboundOperand {
-    void apply(Unbound unbound);
+    void apply(Unbound unbound, int a);
 }

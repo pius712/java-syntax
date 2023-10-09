@@ -13,7 +13,7 @@ public class Unbound {
         return stored;
     }
 
-    public void add() {
-        stored += 1;
+    public void add(int a) {
+        stored += 1 + 10;
     }
 }
